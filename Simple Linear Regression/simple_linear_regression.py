@@ -12,33 +12,33 @@ from sklearn.linear_model import LinearRegression
 
 
 # loading the dataset
-
 data = pd.read_csv("C:/Users/kavif/Documents/Git/Machine_learning_python/Simple Linear Regression/data/Salary_Data.csv")
 x_data = data.iloc[:,0:1].values
 y_data =  data.iloc[:,1:].values
+print("Imported dataset")
 
+# ploting the data
+def plot_data():
+    plt.scatter(x_data,y_data , color= 'blue')
+    plt.title("dataset")
+    plt.xlabel("years")
+    plt.ylabel('Salary')
+    plt.show()
+plot_data()
 
-# ploting the dataset 
-def data_graph(x, y):
-    plt.scatter(x, y)
+print("Fitting the Machine")
+# fiting the Machine learning algorthim
+machine = LinearRegression()
+machine.fit(x_data, y_data)
+
+print("Plotting the result")
+# ploting the result;
+def result_plot():
+    plt.scatter(x_data,y_data , color= 'blue')
+    plt.plot(x_data,machine.predict(x_data), color='red')
+    plt.title("dataset")
+    plt.xlabel("years")
+    plt.ylabel('Salary')
     plt.show()
 
-
-
-if __name__ == "__main__":
-    
-    x_train = x_data[0:20,:]
-    x_test = x_data[20:,:]
-
-    y_train = y_data[0:20,:]
-    y_test = y_data[20:,:]
-
-    regressor = LinearRegression()
-    regressor.fit(x_train,y_train)
-    y_pred = regressor.predict(x_test)
-
-    plt.scatter(x_test,y_test)
-    plt.plot(y_pred, color="red")
-    plt.show()
-
-
+result_plot()
