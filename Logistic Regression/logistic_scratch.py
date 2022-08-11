@@ -86,3 +86,4 @@ if __name__ == "__main__":
     regressor.fit(x_train , y_train)
     pred = regressor.predict(x_test)
     regressor.eval(pred,y_test)
+    
