@@ -64,7 +64,7 @@ class Multiple_Linear_Regression:
 if __name__ =="__main__":
     
     # importing the datafile
-    data = pd.read_csv("C:/Users/kavif/Documents/Git/Machine_learning_python/Multiple linear Regression/data/50_Startups.csv")
+    data = pd.read_csv("/Multiple linear Regression/data/50_Startups.csv")
     x_value= data.iloc[:,0:3].values
     y_value = data.iloc[:,4:].values
 
