@@ -12,7 +12,7 @@ from sklearn.linear_model import LinearRegression
 
 
 # loading the dataset
-data = pd.read_csv("C:/Users/kavif/Documents/Git/Machine_learning_python/Simple Linear Regression/data/Salary_Data.csv")
+data = pd.read_csv("/Simple Linear Regression/data/Salary_Data.csv")
 x_data = data.iloc[:,0:1].values
 y_data =  data.iloc[:,1:].values
 print("Imported dataset")
