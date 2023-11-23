@@ -82,7 +82,7 @@ def Simple_linear_Regression(x,y):
 if __name__ == "__main__":
 
     # loading the dataset
-    data_file = pd.read_csv("C:/Users/kavif/Documents/Git/Machine_learning_python/Simple Linear Regression/data/Salary_Data.csv")
+    data_file = pd.read_csv("/Simple Linear Regression/data/Salary_Data.csv")
     x_data = data_file.iloc[:,0:1].values
     y_data = data_file.iloc[:,1:].values
 
