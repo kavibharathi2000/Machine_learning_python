@@ -14,7 +14,7 @@ import numpy as np
 if __name__ == "__main__":
 
     # loading the dataset
-    file = pd.read_csv("C:/Users/kavif/Documents/Git/Machine_learning_python/Multiple linear Regression/data/50_Startups.csv")
+    file = pd.read_csv("/Multiple linear Regression/data/50_Startups.csv")
     x_data = file.iloc[:,0:3].values
     y_data = file.iloc[:,4:].values
 
